@@ -6,16 +6,22 @@
 #define SIZE 5
 int main(void)
 {	
-	int i;
+	int i, average;
+	int sum;
 	int grade[SIZE];
-	printf("input 5 scores");
+	printf("input 5 scores: ");
 	
-	for (i=0; i<SIZE; i++)
+	sum=0;
+	for(i = 0; i<SIZE; i++)
+	{
 		scanf("%d", &grade[i]);
+		sum += grade[i];
+	}
 	
-	for (i=0; i<SIZE; i++)
-		printf("grade[%d] = %d\n", i, grade[i]);
-		
+	average = sum / SIZE;
+	
+	printf("score average: %i\n", average);
+	
 	system("PAUSE");
 	return 0;
 }
